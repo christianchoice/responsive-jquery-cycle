@@ -1,3 +1,7 @@
+Using jQuery Cycle plugin http://jquery.malsup.com/cycle/
+
+View demo here: http://labs.mmikkel.no/jquery-responsive-cycle/demo.html
+
 A basic jQuery Cycle plugin slideshow, implemented with responsive width handling.
 
 This implementation works with the following markup:
