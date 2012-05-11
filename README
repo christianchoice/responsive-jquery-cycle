@@ -1,0 +1,21 @@
+A basic jQuery Cycle plugin slideshow, implemented with responsive width handling.
+
+This implementation works with the following markup:
+
+<div class="container">
+	<div class="cycle-slides">
+		<div class="cycle-slide" />
+		<div class="cycle-slide" />
+		<div class="cycle-slide" />
+	</div>
+	<div class="cycle-pager"></div>
+</div>
+
+Usage:
+
+<script type="text/javascript">
+	var slideshow = new SlideShow(jQuery('#container'));
+	jQuery(window).bind('resize',function(){
+		slideshow.update();
+	});
+</script>

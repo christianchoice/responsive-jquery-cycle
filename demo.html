@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery responsive Cycle plugin demo</title>
+		<style type="text/css">
+			html,body { margin:0; padding:0; color:#333; }
+			a,a:visited,a:active { color:#333; text-decoration:none; }
+			a:hover { color:#000; }
+			#wrapper { width:100%; max-width:940px; margin:10px auto 0 auto; }
+			#slideshow { width:100%; }
+			.cycle-slides { margin-bottom:12px; }
+			.cycle-slides img { width:100%; height:auto; }
+			.cycle-pager { width:auto; float:left; }
+			.cycle-pager a { margin-right:5px; }
+			.cycle-nav { width:auto; float:right;}
+			.cycle-nav div { width:auto; float:left; margin-right:10px; cursor:pointer; }
+		</style>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript" src="jquery.cycle.all.js"></script>
+		<script type="text/javascript" src="jquery.responsive.cycle.slideshow.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var slideshow = new SlideShow($('#slideshow'));
+				$(window).bind('resize',function(){
+					slideshow.update();
+				});
+				$(window).trigger('resize');
+			});
+		</script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="slideshow">
+				<div class="cycle-slides">
+					<img src="img/image1.jpg" width="940" height="220" />
+					<img src="img/image2.jpg" width="940" height="220" />
+					<img src="img/image3.jpg" width="940" height="220" />
+				</div>
+				<div class="cycle-pager"></div>
+				<div class="cycle-nav">
+					<div class="cycle-nav-prev">&larr; Previous</div>
+					<div class="cycle-nav-next">Next &rarr;</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
